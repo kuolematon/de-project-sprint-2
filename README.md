@@ -3,11 +3,19 @@
 
 ### Описание
 В данном проекте реалтзованна миграция данных из одной таблицы в отдельные логические таблицы.
-### ERD схема исходной таблицы
+<details>
+<summary> ERD схема исходной таблицы</summary>
 ![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/shipping.png)
-### ERD схема логических таблиц и их связей
+</details>
+
+<details>
+<summary>ERD схема логических таблиц и их связей </summary>
 ![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/tables.png)
-### ERD схема витрины
+</details>
+<details>
+<summary> ERD схема витрины</summary>
+![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/tables.png)
+</details>
 
 ### Как работать с репозиторием
 1. В вашем GitHub-аккаунте автоматически создастся репозиторий `de-project-sprint-2` после того, как вы привяжете свой GitHub-аккаунт на Платформе.
