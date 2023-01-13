@@ -4,9 +4,9 @@
 ### Описание
 В данном проекте реалтзованна миграция данных из одной таблицы в отдельные логические таблицы.
 ### ERD схема исходной таблицы
-![Image alt](https://github.com/kuolematon/de-project-sprint-2/tree/main/image/shipping.png)
+![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/shipping.png)
 ### ERD схема логических таблиц и их связей
-![Image alt](https://github.com/kuolematon/de-project-sprint-2/tree/main/image/tables.png)
+![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/tables.png)
 ### ERD схема витрины
 
 ### Как работать с репозиторием
