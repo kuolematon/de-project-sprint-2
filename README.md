@@ -3,21 +3,12 @@
 
 ### Описание
 В данном проекте реалтзованна миграция данных из одной таблицы в отдельные логические таблицы.
-<details>
-<summary> ERD схема исходной таблицы</summary>
-[![Image alt][1]][1]
-[1]: https://github.com/kuolematon/de-project-sprint-2/blob/main/image/shipping.png
-</details>
-
-<details>
-<summary>ERD схема логических таблиц и их связей </summary>
+### ERD схема исходной таблицы
+![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/shipping.png)
+### ERD схема логических таблиц и их связей
 ![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/tables.png)
-</details>
-<details>
-<summary> ERD схема витрины</summary>
-![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/tables.png)
-</details>
-
+### ERD схема витрины
+![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/shipping_datamart.png)
 ### Как работать с репозиторием
 1. В вашем GitHub-аккаунте автоматически создастся репозиторий `de-project-sprint-2` после того, как вы привяжете свой GitHub-аккаунт на Платформе.
 2. Скопируйте репозиторий на свой локальный компьютер, в качестве пароля укажите ваш `Access Token` (получить нужно на странице [Personal Access Tokens](https://github.com/settings/tokens)):
@@ -45,3 +36,6 @@ docker run -d --rm -p 3000:3000 -p 15432:5432 --name=de-project-sprint-2-server 
 1. CloudBeaver
 2. PostgreSQL
 3. VSCode
+
+### TO DO
+- Срипт отката

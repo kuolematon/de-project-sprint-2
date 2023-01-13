@@ -4,7 +4,13 @@ select
     psi.shippingid,
     psi.vendorid,
     pst.transfer_type,
-    full_day_at_shipping,
+    extract(
+        day
+        from
+            (
+                pss.shipping_end_fact_datetime - pss.shipping_start_fact_datetime
+            )
+    ) full_day_at_shipping,
     case
         when pss.shipping_end_fact_datetime > psi.shipping_plan_datetime then 1
         when pss.shipping_end_fact_datetime is null then null

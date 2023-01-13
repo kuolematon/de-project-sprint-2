@@ -63,7 +63,7 @@ insert into
         agreementid
     )
 select
-    ps.shippingid,
+    distinct ps.shippingid,
     ps.vendorid,
     ps.payment_amount,
     ps.shipping_plan_datetime,
