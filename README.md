@@ -5,7 +5,8 @@
 В данном проекте реалтзованна миграция данных из одной таблицы в отдельные логические таблицы.
 <details>
 <summary> ERD схема исходной таблицы</summary>
-![Image alt](https://github.com/kuolematon/de-project-sprint-2/blob/main/image/shipping.png)
+[![Image alt][1]][1]
+[1]: https://github.com/kuolematon/de-project-sprint-2/blob/main/image/shipping.png
 </details>
 
 <details>
