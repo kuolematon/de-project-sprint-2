@@ -78,6 +78,25 @@ from
     left join public.shipping_country_rates pscr on ps.shipping_country = pscr.shipping_country;
 
 --public.shipping_status
+with wt_ps as (
+    select
+        shippingid,
+        max(state_datetime) as max_state_datetime,
+        min(
+            case
+                when state = 'booked' then state_datetime
+            end
+        ) as shipping_start_fact_datetime,
+        max(
+            case
+                when state = 'recieved' then state_datetime
+            end
+        ) as shipping_end_fact_datetime
+    from
+        public.shipping
+    group by
+        shippingid
+)
 insert into
     public.shipping_status(
         shippingid,
@@ -90,29 +109,11 @@ select
     ps.shippingid,
     ps.status,
     ps.state,
-    ps2.shipping_start_fact_datetime,
-    ps2.shipping_end_fact_datetime
+    wt_ps.shipping_start_fact_datetime,
+    wt_ps.shipping_end_fact_datetime
 from
     public.shipping ps
-    inner join(
-        select
-            shippingid,
-            max(state_datetime) as max_state_datetime,
-            min(
-                case
-                    when state = 'booked' then state_datetime
-                end
-            ) as shipping_start_fact_datetime,
-            max(
-                case
-                    when state = 'recieved' then state_datetime
-                end
-            ) as shipping_end_fact_datetime
-        from
-            public.shipping
-        group by
-            shippingid
-    ) ps2 on ps.shippingid = ps2.shippingid
-    and ps.state_datetime = ps2.max_state_datetime
+    inner join wt_ps on ps.shippingid = wt_ps.shippingid
+    and ps.state_datetime = wt_ps.max_state_datetime
 order by
     shippingid;
